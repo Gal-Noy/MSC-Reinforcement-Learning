@@ -1,2 +1,7 @@
 midterm
 .venv
+**/models/**
+**/videos/**
+**/__pycache__/**
+*.pkl
+*.mp4
