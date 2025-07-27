@@ -59,9 +59,11 @@ class MiniGridCNN(nn.Module):
     def __init__(self, output_dim=128, input_channels=3, input_size=56):
         super().__init__()
         self.conv = nn.Sequential(
-            nn.Conv2d(input_channels, 32, kernel_size=5, stride=2, padding=2),
+            nn.Conv2d(input_channels, 32, kernel_size=8, stride=4),
             nn.ReLU(),
-            nn.Conv2d(32, 64, kernel_size=3, stride=2, padding=1),
+            nn.Conv2d(32, 64, kernel_size=4, stride=2),
+            nn.ReLU(),
+            nn.Conv2d(64, 64, kernel_size=3, stride=1),
             nn.ReLU(),
             nn.Flatten()
         )
