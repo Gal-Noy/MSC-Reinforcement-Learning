@@ -52,7 +52,7 @@ def preprocess(obs, target_size=(56, 56)):
 
     else:
         raise ValueError(f"Unexpected observation shape: {obs_tensor.shape}")
-            
+
 class MiniGridCNN(nn.Module):
     """CNN encoder for MiniGrid environments."""
     
